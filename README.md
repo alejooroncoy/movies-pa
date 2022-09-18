@@ -16,13 +16,19 @@
         <th align='center'>HTML</th>
         <th align='center'>Sass</th>
         <th align='center'>
-          Javascript
-        </th>
-        <th align='center'>
           Vite
         </th>
         <th align='center'>
+          Javascript
+        </th>
+        <th align='center'>
           React
+        </th>
+        <th align='center'>
+          Luxon
+        </th>
+        <th align='center'>
+          Dotenv
         </th>
       </tr>
     </thead>
@@ -35,13 +41,19 @@
           <img src="https://www.svgrepo.com/show/354310/sass.svg" width="50" />
         </td>
         <td align='center'>
-          <img src="https://www.svgrepo.com/show/355081/js.svg" width="40" />
-        </td>
-        <td align='center'>
           <img src="https://www.svgrepo.com/show/354521/vitejs.svg" width="40" />
         </td>
         <td align='center'>
+          <img src="https://www.svgrepo.com/show/355081/js.svg" width="40" />
+        </td>
+        <td align='center'>
           <img src="https://www.svgrepo.com/show/354259/react.svg" width="40" />
+        </td>
+        <td align='center'>
+          <img src="https://moment.github.io/luxon/docs/_media/Luxon_icon.svg" width="40" />
+        </td>
+        <td align='center'>
+          <img src="https://raw.githubusercontent.com/motdotla/dotenv/master/dotenv.svg" width="40" />
         </td>
       </tr>
     </tbody>
