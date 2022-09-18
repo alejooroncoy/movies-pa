@@ -1,0 +1,21 @@
+.info {
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  &-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  &__title {
+    margin: 0;
+    text-align: center;
+    font-size: 2.5rem;
+    @media (min-width: 768px) {
+      font-size: 3rem;
+    }
+  }
+}

@@ -1,0 +1,128 @@
+.movie {
+  width: 100%;
+  position: relative;
+  &:first-child::before {
+    content: '';
+    top: 0;
+    position: absolute;
+    width: min(90%, 1024px);
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: #BFBFBF;
+    height: .1rem;
+    margin: auto;
+  }
+  &::after {
+    content: '';
+    bottom: 0;
+    position: absolute;
+    width: min(90%, 1024px);
+    background-color: #BFBFBF;
+    height: .1rem;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+  &:nth-last-of-type(1)::after {
+    display: none; 
+  }
+  &-container {
+    width: min(100%, 1024px);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-sizing: border-box;
+    padding: 2rem 1rem;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      gap: 3rem;
+      padding: 3rem 2rem;
+      margin: auto;
+    }
+  }
+  &__img {
+    width: 100%;
+    border-radius: 1.8rem;
+    object-fit: cover;
+    &-container {
+      width: auto;
+      padding: 0 0.5rem;
+      @media (min-width: 768px) {
+        padding: 0;
+        width: 60%;
+      }
+    }
+  }
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    &__title {
+      margin: 0;
+      color: #1A3155;
+      font-weight: 800;
+      font-size: 2.2rem;
+    }
+    &__info-extra {
+      font-size: 1rem;
+      font-weight: 100;
+      margin: 0;
+    }
+    &__description {
+      margin: 0;
+    }
+    &__feature {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: calc(100% / 3);
+      gap: 1rem;
+      padding: 1rem 0;
+      border-radius: 0.5rem;
+      &:nth-child(1) {
+        background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+      }
+      &:nth-child(2) {
+        background-image: linear-gradient(161deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); 
+      }
+      &:nth-child(3) {
+        background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+      }
+      &-container {
+        display: flex;
+        gap: 1rem;
+        overflow: hidden;
+        transition: height 0.5s;
+        &--close {
+          height: 0;
+        }
+        &--open {
+          height: 5rem;
+          @media (min-width: 768px) {
+            height: 5.625rem;
+          }
+        }
+      }
+      &-title {
+        font-size: 0.9rem;
+        margin: 0;
+        color: white;
+        font-weight: 700;
+        @media (min-width: 768px) {
+          font-size: 1.2rem;
+        }
+        &::first-letter {
+          text-transform: uppercase;
+        }
+      }
+      &-value {
+        color: white;
+        font-weight: 400;
+        font-size: 0.8rem;
+        @media (min-width: 768px) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
