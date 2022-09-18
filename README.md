@@ -4,9 +4,9 @@
 
   Movies paaa 🎥, es una aplicación web, para mostrar películas, con su información tales como sinopsis, puntuación, popularidad entre otros.
 
-## 📸 Foto web 📸
+## 📸 Gif web 📸
 
-  ![Foto web](./src/assets/img/photo_web.jpg)
+  ![Gif web](./src/assets/gif/gif_web.gif)
 
 ## 👨‍💻 Tecnologías utilizadas 👨‍💻
 
