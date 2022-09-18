@@ -19,6 +19,9 @@
           Javascript
         </th>
         <th align='center'>
+          Vite
+        </th>
+        <th align='center'>
           React
         </th>
       </tr>
@@ -33,6 +36,9 @@
         </td>
         <td align='center'>
           <img src="https://www.svgrepo.com/show/355081/js.svg" width="40" />
+        </td>
+        <td align='center'>
+          <img src="https://www.svgrepo.com/show/354521/vitejs.svg" width="40" />
         </td>
         <td align='center'>
           <img src="https://www.svgrepo.com/show/354259/react.svg" width="40" />
