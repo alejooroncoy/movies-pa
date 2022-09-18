@@ -1,0 +1,25 @@
+- name: Build and Deploy to Netlify
+
+on:
+  push:
+    paths-ignore:
+      - ".github/**"
+
+jobs:
+  build: 
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/checkout@v2
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1.2.3
+        with:
+          publish-dir: './dist'
+          production-branch: develop
+          deploy-message: "Deploy success 👨‍💻"
+          enable-commit-comment: true
+          overwrites-pull-request-comment: true
+          env:
+            NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+            NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          timeout-minutes: 1
+    
