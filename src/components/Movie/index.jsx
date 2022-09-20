@@ -12,22 +12,12 @@ const Movie = ({
   adult,
   description,
   date,
-  position = "left",
 }) => {
   const dateRelease = DateTime.fromSQL(date);
-  const positions = {
-    right: 1,
-    left: 0,
-  };
   return (
     <article className="movie">
       <div className="movie-container">
-        <div
-          style={{
-            order: positions[position],
-          }}
-          className="movie__img-container"
-        >
+        <div className="movie__img-container">
           <img
             loading="lazy"
             width={400}

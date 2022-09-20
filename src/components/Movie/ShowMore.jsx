@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Feature = ({ name, value }) => {
   return (
@@ -11,29 +11,17 @@ const Feature = ({ name, value }) => {
 
 const MovieShowMore = ({ popularity, adult, vote_average }) => {
   const [isOpen, setOpen] = useState(false);
-  const [show, setShow] = useState(isOpen);
   const handleClickShowMore = () => setOpen(!isOpen);
-  useEffect(() => {
-    if (isOpen) setShow(true);
-  }, [isOpen]);
-
-  const handleTransitionEndOpen = () => !isOpen && setShow(false);
-
   return (
     <>
       <div
-        onTransitionEnd={handleTransitionEndOpen}
         className={`movie__content__feature-container movie__content__feature-container--${
           isOpen ? "open" : "close"
         }`}
       >
-        {show && (
-          <>
-            <Feature name="popularity" value={popularity} />
-            <Feature name="a. content" value={adult ? "Sí" : "No"} />
-            <Feature name="punctuation" value={vote_average} />
-          </>
-        )}
+        <Feature name="popularity" value={popularity} />
+        <Feature name="a. content" value={adult ? "Sí" : "No"} />
+        <Feature name="punctuation" value={vote_average} />
       </div>
       <button onClick={handleClickShowMore} className="button button--movie">
         {isOpen ? "Leer menos" : "Leer más"}
