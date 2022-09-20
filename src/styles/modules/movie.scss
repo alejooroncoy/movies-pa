@@ -1,16 +1,18 @@
 .movie {
   width: 100%;
   position: relative;
-  &:first-child::before {
-    content: '';
-    top: 0;
-    position: absolute;
-    width: min(90%, 1024px);
-    left: 50%;
-    transform: translate(-50%, 50%);
-    background-color: #BFBFBF;
-    height: .1rem;
-    margin: auto;
+  &:nth-of-type(1) {
+    &::before {
+      content: '';
+      top: 0;
+      position: absolute;
+      width: min(90%, 1024px);
+      left: 50%;
+      transform: translate(-50%, 50%);
+      background-color: #BFBFBF;
+      height: .1rem;
+      margin: auto;
+    }
   }
   &::after {
     content: '';
@@ -121,7 +123,7 @@
         color: white;
         font-weight: 700;
         @media (min-width: 768px) {
-          font-size: 1rem;
+          font-size: 0.8rem;
         }
         @media (min-width: 1024px) {
           font-size: 1.2rem;
